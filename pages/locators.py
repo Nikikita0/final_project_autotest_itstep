@@ -35,9 +35,15 @@ class BasePageLocators:
 
     LOGO_FOOTER = (By.XPATH, '//img[@src="images/logo-footer.png"]')
 
+    ALERT_SUCCESS = (By.XPATH, '//div[@id="alert-success"]')
+    ALERT_ERROR = (By.XPATH, "//div[@id = 'alert-error']")
+
 
 class MainPageLocators:
+    SCREEN_SLIDER = (By.XPATH, "//div[@class = 'screen_slider']")
 
+    MAIN_CAT = (By.XPATH, '//a[@href="category/zaryadki"]')
+    MAIN_SUBCAT = (By.XPATH, '//a[@href="category/Besprovodnye-BZU"]')
     RETURN_ITEM = (By.XPATH, '//div[@class="row"]/div[1]/div[@class="char_item d-flex flex-row align-items-center justify-content-start"]')
     DELIVERY_ITEM = (By.XPATH, '//div[@class="row"]/div[2]/div[@class="char_item d-flex flex-row align-items-center justify-content-start"]')
     PAYMENT_ITEM = (By.XPATH, '//div[@class="row"]/div[3]/div[@class="char_item d-flex flex-row align-items-center justify-content-start"]')
@@ -49,7 +55,7 @@ class MainPageLocators:
     NEW_PRODUCT_PANEL = (By.XPATH, '//div[@class="product_panel panel active"]')
     NEW_PRODUCT = (By.XPATH, '//div[@data-slick-index="2"]/div[2]//div[@class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center"]')
 
-    SHOW_ALL_HITS = (By.XPATH, '//a[text()="Показать все" and @href="main/showHit""]')
+    SHOW_ALL_HITS = (By.XPATH, '//a[text()="Показать все" and @href="main/showHit"]')
     SHOW_NEXT_HITS = (By.XPATH, '//div[@class="best_next best_nav"]')
     SHOW_PREV_HITS = (By.XPATH, '//div[@class="best_prev best_nav"]')
     HITS_PRODUCT_PANEL = (By.XPATH, '//div[@class="bestsellers_panel panel active"]')
@@ -57,4 +63,4 @@ class MainPageLocators:
 
     SHOW_NEXT_TRENDS = (By.XPATH, '//div[@class="trends_next trends_nav slick-arrow"]')
     SHOW_PREV_TRENDS = (By.XPATH, '//div[@class="trends_prev trends_nav slick-arrow"]')
-    TREND_PRODUCT = (By.XPATH, '//img[@src="content_images/6a2acee6946baaf0709990b1a544e9a8.jpg"]/../../parent::div[@style="height: 415px;"]')  # У меня таких элементов 3 находит я не знаю как тут найти уникальный
+    TREND_PRODUCT = (By.XPATH, '//img[@src="content_images/6a2acee6946baaf0709990b1a544e9a8.jpg"]/ancestor::div[@style="height: 415px;"]')  # У меня таких элементов 3 находит я не знаю как тут найти уникальный
