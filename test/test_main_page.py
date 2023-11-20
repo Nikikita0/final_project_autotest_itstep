@@ -4,6 +4,7 @@ from ..pages.main_page import MainPage
 from ..settings import sets
 import random
 
+
 @pytest.mark.smoke
 @pytest.mark.regression
 @pytest.mark.main_page
